@@ -38,6 +38,7 @@
 >      pixels[i] = red(grayColor);
 >      pixels[i + 1] = green(grayColor);
 >      pixels[i + 2] = blue(grayColor);
+>      pixels[i + 3] = alpha(grayColor);
 >    }
 >   updatePixels();
 > }
