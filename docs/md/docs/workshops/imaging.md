@@ -79,12 +79,12 @@
 >      let r_norm = r/255;
 >      let g_norm = g/255;
 >      let b_norm = b/255;
->      let r_prim = 255 * (r_norm/255)^(1/2.2)
->      let g_prim = 255 * (g_norm/255)^(1/2.2)
->      let b_prim = 255 * (b_norm/255)^(1/2.2)
+>      let r_prim = 255 * Math.pow((r_norm/255),(1/2.2))
+>      let g_prim = 255 * Math.pow((g_norm/255),(1/2.2))
+>      let b_prim = 255 * Math.pow((b_norm/255),(1/2.2))
 >      let y_norm = 0.2126 * r_prim + 0.7152 * g_prim + 0.0722 * b_prim
 >      let y = y_norm*255;
->      let grayColor = color(y, y, y);
+>      let grayColor = color(y_norm, y_norm, y_norm);
 >      pixels[i] = red(grayColor);
 >      pixels[i + 1] = green(grayColor);
 >      pixels[i + 2] = blue(grayColor);
